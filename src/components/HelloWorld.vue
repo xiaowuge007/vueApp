@@ -1,17 +1,12 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <div>
-      <input type="text" placeholder="111">
+    <div id="footer" v-if="$route.meta.navShow">
+      <div><router-link to="/HelloWorld/home">home</router-link></div>
+      <div><router-link to="/HelloWorld/about">about</router-link></div>
+      <div><router-link to="/HelloWorld/mine">mine</router-link></div>
     </div>
-    <div>
-      <select name="" id="">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
+    <div id="content">
+      <router-view/>
     </div>
   </div>
 </template>
@@ -21,7 +16,13 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      flag: false
+    }
+  },
+  methods: {
+    show: function () {
+      this.flag = true
     }
   }
 }
@@ -41,6 +42,28 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #f40;
+}
+
+#content{
+  top:0;
+  position: absolute;
+  bottom:40px;
+  width:100%;
+  background-color: #eee;
+}
+#footer{
+  height:40px;
+  width:100%;
+  position:absolute;
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  bottom:0;
+  background-color: #42b983;
+}
+#footer>div{
+  flex:1;
+  text-align: center;
 }
 </style>
