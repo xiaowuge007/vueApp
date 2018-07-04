@@ -10,6 +10,8 @@ import './login'
 Vue.config.productionTip = false
 Vue.use(MintUI)
 console.log(MD5('D^4Q!h9z4l7EJK8Fkb1526637600000'))
+//这是新加的
+let a = '22222'
 /*document.addEventListener("deviceready", onDeviceReady, false)
 function onDeviceReady () {
 }*/
