@@ -4,6 +4,17 @@ html,body{
 }
 .one{
   padding-top: 40px;
+  height: 100%;
+  position: relative;
+}
+.list-item {
+  height:40px;
+  width:100%;
+  line-height: 40px;
+  padding: 0 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 2px;
+  list-style: none;
 }
 #header{
   height:40px;
@@ -15,4 +26,59 @@ html,body{
 *{
   margin:0;
   padding:0;
+  box-sizing: border-box;
+}
+.m-tab-bar{
+  display: flex;
+  flex-wrap: nowrap;
+  width:100%;
+  position: absolute;
+  height:40px;
+  top: 40px;
+  line-height: 40px;
+}
+.m-tab-bar>div{
+  flex:1;
+  text-align: center;
+}
+.m-tab-bar>div.active{
+  border-bottom:1px solid #f40;
+  color:#f40;
+}
+@keyframes loading {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(359deg);
+  }
+}
+.t-loading{
+  animation: loading  2s infinite linear;
+  display: inline-block;
+}
+.shop-tab-box{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  position: absolute;
+  background-color: #fefef0;
+  top:0;
+  bottom: 0;
+}
+.shop-tab-box>div{
+  position: absolute;
+  background-color: #fff;
+  z-index: 2;
+  top:0;
+  width:100%;
+}
+.shop-loading-box{
+  height:40px;
+  line-height: 40px;
+  text-align: center;
+}
+.btn{
+  padding: 5px 12px;
+  height:32px;
 }

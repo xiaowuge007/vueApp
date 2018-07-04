@@ -1,18 +1,12 @@
 <template>
-  <div>
-    <form>
-      <input type="text" placeholder="请输入账号" class="input-form">
-      <input type="password" placeholder="请输入密码" class="input-form">
-      <button class="btn" @click="sub">登录</button>
-    </form>
+  <div class="btn-box">
+      <button class="btn full-btn" @click="sub">登录</button>
   </div>
 </template>
 <script>
 export default {
   methods: {
     sub: function () {
-      debugger
-      console.log(this.$router)
       window.sessionStorage.setItem('admin', '111')
       this.$router.replace({
         path: this.$route.query.redirect
@@ -21,3 +15,18 @@ export default {
   }
 }
 </script>
+<style>
+  .full-btn{
+    width:100%;
+    background-color: #26a2ff;
+    color: #fff;
+    padding: 8px 20px;
+    display: block;
+    outline: none;
+    border: 0;
+    margin: 100px 0;
+  }
+  .btn-box{
+    padding: 20px;
+  }
+</style>

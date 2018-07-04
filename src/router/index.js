@@ -14,7 +14,10 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld,
-      redirect: '/HelloWorld/home'
+      redirect: '/HelloWorld/home',
+      meta: {
+        keepAlive: true
+      }
     },
     {
       path: '/login',
@@ -32,7 +35,8 @@ export default new Router({
           name: 'about',
           component: About,
           meta: {
-            navShow: true
+            navShow: true,
+            keepAlive: true
           }
         },
         {
@@ -40,7 +44,8 @@ export default new Router({
           name: 'home',
           component: Home,
           meta: {
-            navShow: true
+            navShow: true,
+            keepAlive: true
           }
         },
         {
@@ -49,7 +54,8 @@ export default new Router({
           component: Mine,
           meta: {
             navShow: true,
-            requiresAuth: true
+            requiresAuth: true,
+            keepAlive: true
           }
         }
       ]

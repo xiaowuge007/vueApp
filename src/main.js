@@ -2,12 +2,17 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import MD5 from 'md5'
 import router from './router'
+import MintUI from 'mint-ui'
+import './plugins/focus.js'
 import './login'
-
 Vue.config.productionTip = false
-
-/* eslint-disable no-new */
+Vue.use(MintUI)
+console.log(MD5('D^4Q!h9z4l7EJK8Fkb1526637600000'))
+/*document.addEventListener("deviceready", onDeviceReady, false)
+function onDeviceReady () {
+}*/
 new Vue({
   el: '#app',
   router,
